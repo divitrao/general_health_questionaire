@@ -1,3 +1,22 @@
+.heart-age{
+  max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    background-color:white;
+    position: relative;
+    padding: 60px 20px 40px 20px;
+    margin-top: 100px;
+}
+
+.heart-age .age{
+  font-size: 100px;
+  line-height: 110px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: -125px;
+
+}
+
 #score{
   font-weight: bolder;
   font-size: 20px;
@@ -15,7 +34,7 @@
 
 @media only screen and (max-width:381px) {
   #share{
-    margin-right: 0%;
+    margin-right: -2%;
   }
 }
 

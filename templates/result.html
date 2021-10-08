@@ -17,25 +17,6 @@
                 </h3>
             </div>
             <div class="card-toolbar" id="card_header">
-                <!-- {% if save == True %}
-                <a href="{% url 'user_app:register' %}" class="btn btn-light-warning mr-2">
-                    <i class="flaticon2-bell-4"></i> SAVE
-                </a>
-                {% endif %}
-                <div class="dropdown mr-2">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Share via
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        {% post_to_whatsapp object_or_url "Share via WhatsApp" %}
-                        {% send_email object.title "My test result : hi Check it out!" object_or_url "Share via email" %}
-                        
-                    </div>
-                </div>
-                <div class="btn btn-light-success  text-dark" id="total_score">
-                    Total Score {{marks_achieved}}/{{out_off_marks}}
-                </div> -->
             </div>
         </div>
         <div class="card-body">
@@ -78,6 +59,24 @@
 
         </div>
     </div>
+    {% if marks_achieved > 11  %}
+    <div class="heart-age">
+        <div class="age text-danger">{{marks_achieved}}</div>
+        <p><strong>Your Score is   {{marks_achieved}}</strong><br><br>Based on the answers given by you </p>
+                <p>
+                There might be a chance that you may be psychologically  distressed. We would advice you to  consult a psychotherapist or psychiatrist.
+            </p>
+        </div>
+    {% else %}
+    <div class="heart-age">
+        <div class="age" style="color: green;">{{marks_achieved}}</div>
+        <p><strong>Your Score is   {{marks_achieved}}</strong><br><br>Based on the answers given by you </p>
+                <p>
+                There might be less chance that you may be psychologically  distressed. We would recommned you to stay healthy and happy &#128512;
+            </p>
+        </div>
+    {% endif %}
+    
     {% if user.is_authenticated %}
     {% if user.username == username %}
 

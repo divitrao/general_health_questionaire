@@ -13,7 +13,6 @@ class HomeView(TemplateView):
     def dispatch(self, request, *args, **kwargs):
         user_session = self.request.session.get('ghq_user_session_id',None)
         if request.user.is_authenticated:
-            print( self.request.session.get('ghq_user_session_id',None))
             if user_session is not None:
                 if QuizTaken.objects.filter(id=uuid.UUID(user_session)).exists():
                     quiz_attempt = QuizTaken.objects.get(id=uuid.UUID(user_session))

@@ -27,10 +27,17 @@
   opacity: 0.75;
 }
 
+.heading{
+  font-size: 5rem;
+}
+
+.sponsor{
+  font-size: 2rem;
+}
+
 .description{
   position: relative;
   color: #ffffff;  
-  font-size: 5rem;
   line-height: 0.9;
   text-align: center;
 }
